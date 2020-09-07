@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <img alt="RPSLS logo" src="./assets/rpsls_logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Game />
+    <HelloWorld msg="Welcome to Rock Paper Scissor Lizard Spock"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Game from "@/components/Game";
 
 export default {
   name: 'App',
   components: {
+    Game,
     HelloWorld
   }
 }
