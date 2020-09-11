@@ -5,7 +5,7 @@
       <div class="inner-border">
         <div class="score-box--container">
           <h4>
-            Computer
+            Comp
             <span class="score-box--count score-box--computer">{{ computerWins }}</span>
           </h4>
         </div>
@@ -88,7 +88,7 @@
             (selection === '🦎' && this.computerGuess === '🖖') ||
             (selection === '✌️' && this.computerGuess === '🦎') ||
             (selection === '🦎' && this.computerGuess === '✋') ||
-            (selection === '✋️' && this.computerGuess === '🖖') ||
+            (selection === '✋' && this.computerGuess === '🖖') ||
             (selection === '🖖' && this.computerGuess === '👊')
           ) {
           this.userWins += 1
@@ -149,7 +149,7 @@
   .score-box {
     max-width: 200px;
     margin: 25px auto;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color: darkslategrey;
     color: white;
   }
@@ -173,5 +173,9 @@
   .score-box--user {
     background-color: black;
     color: white;
+    border: 1px solid darkred;
+  }
+  .score-box--user {
+    border: 1px solid darkblue;
   }
 </style>
