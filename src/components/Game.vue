@@ -1,7 +1,22 @@
 <template>
   <div class="container">
-    <h2 class="computer-win-counts">{{ computerWins }}</h2>
-    <h2 class="user-win-counts">{{ userWins }}</h2>
+    <h4>Scoreboard</h4>
+    <div class="score-box">
+      <div class="inner-border">
+        <div class="score-box--container">
+          <h4>
+            Computer
+            <span class="score-box--count score-box--computer">{{ computerWins }}</span>
+          </h4>
+        </div>
+        <div class="score-box--container">
+          <h4>
+            User
+            <span class="score-box--count score-box--user">{{ userWins }}</span>
+          </h4>
+        </div>
+      </div>
+    </div>
     <div class="game-board">
       <h1 class="computer-guess">{{ computerGuess ? computerGuess : 'Make a Move' }}</h1>
       <ul class="emojis">
@@ -131,13 +146,32 @@
   .rules li {
     margin: 10px auto;
   }
-  .user-win-counts,
-  .computer-win-counts {
-    position: absolute;
-    left: 10px;
-    margin: 40px;
+  .score-box {
+    max-width: 200px;
+    margin: 25px auto;
+    border-radius: 10px;
+    background-color: darkslategrey;
+    color: white;
   }
-  .user-win-counts {
-    top: 530px;
+  .inner-border {
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .score-box--count {
+    border-radius: 5px;
+    font-size: 25px;
+    width: 50px;
+  }
+  .score-box--container h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .score-box--computer,
+  .score-box--user {
+    background-color: black;
+    color: white;
   }
 </style>
